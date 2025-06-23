@@ -34,7 +34,7 @@ but it **does not use the full NvChad framework or its default configurations** 
     └── options.lua        # Neovim options
 ```
 
-## 🛠 Installation
+## 🛠️ Installation
 
 ```bash
 git clone https://github.com/0xrinful/nvim ~/.config/nvim
