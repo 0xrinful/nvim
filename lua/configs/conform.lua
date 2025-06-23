@@ -8,7 +8,6 @@ return {
     typescript = { "prettierd" },
     javascriptreact = { "prettierd" },
     typescriptreact = { "prettierd" },
-    markdown = { "prettierd" },
     json = { "fixjson" },
     jsonc = { "fixjson" },
     sh = { "shfmt" },
