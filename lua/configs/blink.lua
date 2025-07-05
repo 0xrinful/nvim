@@ -81,18 +81,6 @@ local opts = {
         return b.client_name == "emmet_language_server"
       end,
 
-      function(a, b)
-        local ft = vim.bo.filetype
-        if ft ~= "go" then
-          return
-        end
-
-        if a.sortText == b.sortText or a.sortText == nil or b.sortText == nil then
-          return
-        end
-        return a.sortText < b.sortText
-      end,
-
       -- "exact",
       "score",
       "sort_text",
