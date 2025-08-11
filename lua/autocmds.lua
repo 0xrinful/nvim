@@ -1,5 +1,6 @@
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
+local usercmd = vim.api.nvim_create_user_command
 
 -- user event that loads after UIEnter + only if file buf is there
 autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
@@ -62,3 +63,7 @@ autocmd("FileType", {
     vim.opt_local.formatoptions:remove("r")
   end,
 })
+
+usercmd("ToggleFormat", function()
+  vim.b.disable_format = not vim.b.disable_format
+end, {})

@@ -19,14 +19,20 @@ return {
     templ = { "templ" },
   },
 
-  format_on_save = {
-    timeout_ms = 500,
-    lsp_fallback = true,
-  },
+  format_on_save = function(bufnr)
+    if vim.b[bufnr].disable_format then
+      return
+    end
+    return { timeout_ms = 500, lsp_format = "fallback" }
+  end,
 
   formatters = {
     sql_formatter = {
       prepend_args = { "--language", "postgresql" },
+    },
+
+    ["goimports-reviser"] = {
+      prepend_args = { "-rm-unused" },
     },
   },
 }
