@@ -133,7 +133,7 @@ M.servers = {
       "scss",
       "typescriptreact",
       "htmlangular",
-      "templ",
+      "template",
       "gotmpl",
     },
   },

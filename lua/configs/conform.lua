@@ -31,8 +31,8 @@ return {
       prepend_args = { "--language", "postgresql" },
     },
 
-    ["goimports-reviser"] = {
-      prepend_args = { "-rm-unused" },
-    },
+    -- ["goimports-reviser"] = {
+    --   prepend_args = { "-rm-unused" },
+    -- },
   },
 }
