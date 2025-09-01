@@ -167,6 +167,8 @@ M.servers = {
   },
 
   jdtls = {},
+
+  asm_lsp = {},
 }
 
 return M
