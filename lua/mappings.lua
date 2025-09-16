@@ -88,6 +88,7 @@ map(
   "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>",
   { desc = "telescope | find all files" }
 )
+map("n", "<leader>fc", cmder("TodoTelescope"), { desc = "telescope | todo comments" })
 
 -- Select Theme
 map("n", "<leader>th", function()
