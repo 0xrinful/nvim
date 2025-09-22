@@ -53,8 +53,10 @@ autocmd("TextYankPost", {
 })
 
 autocmd("TermOpen", {
-  pattern = "*",
-  command = "setlocal foldcolumn=1",
+  callback = function()
+    vim.opt_local.foldcolumn = "1"
+    vim.keymap.set("n", "<C-i>", "<Nop>", { buffer = true })
+  end,
 })
 
 autocmd("FileType", {
