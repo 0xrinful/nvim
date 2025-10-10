@@ -31,6 +31,10 @@ return {
       prepend_args = { "--language", "postgresql" },
     },
 
+    fixjson = {
+      prepend_args = { "--indent", "2" },
+    },
+
     -- ["goimports-reviser"] = {
     --   prepend_args = { "-rm-unused" },
     -- },
