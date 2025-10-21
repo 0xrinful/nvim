@@ -284,10 +284,8 @@ return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
-    cmd = "Markdown",
-    config = function()
-      require("render-markdown").toggle()
-    end,
+    ft = "markdown",
+    opts = {},
   },
 
   {
@@ -298,7 +296,24 @@ return {
   {
     "echasnovski/mini.ai",
     event = "User FilePost",
-    opts = {},
+    opts = {
+      custom_textobjects = {
+        ["%"] = false,
+      },
+    },
+  },
+
+  {
+    "andymass/vim-matchup",
+    event = "User FilePost",
+    init = function()
+      vim.g.matchup_matchparen_offscreen = {}
+    end,
+    opts = {
+      treesitter = {
+        stopline = 500,
+      },
+    },
   },
 
   {
