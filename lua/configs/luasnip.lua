@@ -14,3 +14,14 @@ require("luasnip.loaders.from_snipmate").lazy_load({ paths = vim.g.snipmate_snip
 -- lua format
 require("luasnip.loaders.from_lua").load()
 require("luasnip.loaders.from_lua").lazy_load({ paths = vim.g.lua_snippets_path or "" })
+
+vim.api.nvim_create_autocmd("InsertLeave", {
+  callback = function()
+    local ls = require("luasnip")
+    local buf = vim.api.nvim_get_current_buf()
+
+    if ls.session.current_nodes[buf] and not ls.session.jump_active then
+      ls.unlink_current()
+    end
+  end,
+})

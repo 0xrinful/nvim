@@ -81,7 +81,6 @@ local opts = {
         return b.client_name == "emmet_language_server"
       end,
 
-      -- "exact",
       "score",
       "sort_text",
     },
