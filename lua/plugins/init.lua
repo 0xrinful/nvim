@@ -298,20 +298,7 @@ return {
     event = "User FilePost",
     opts = {
       custom_textobjects = {
-        ["%"] = false,
-      },
-    },
-  },
-
-  {
-    "andymass/vim-matchup",
-    ft = { "html" },
-    init = function()
-      vim.g.matchup_matchparen_offscreen = {}
-    end,
-    opts = {
-      treesitter = {
-        stopline = 500,
+        t = false,
       },
     },
   },
