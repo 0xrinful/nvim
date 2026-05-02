@@ -31,7 +31,7 @@ map("v", "<C-/>", "gc", { desc = "comment | toggle block", remap = true })
 
 -- Mode exits
 -- map("i", "<C-i>", "<ESC>", { desc = "insert | exit mode" })
-map("i", "<C-i>", "<ESC>", { desc = "blink.cmp" })
+map("i", "<C-i>", "<ESC>", { desc = "blink.cmp: " })
 map("t", "<C-i>", "<C-\\><C-N>", { desc = "terminal | exit mode" })
 
 -- Save and quit

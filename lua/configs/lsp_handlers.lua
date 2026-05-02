@@ -100,15 +100,26 @@ M.servers = {
   },
 
   -- Python
-  pyright = {
+  -- pyright = {
+  --   settings = {
+  --     pyright = {
+  --       disableOrganizeImports = false,
+  --       analysis = {
+  --         useLibraryCodeForTypes = true,
+  --         autoSearchPaths = true,
+  --         diagnosticMode = "workspace",
+  --         autoImportCompletions = true,
+  --       },
+  --     },
+  --   },
+  -- },
+
+  ty = {
     settings = {
-      pyright = {
-        disableOrganizeImports = false,
-        analysis = {
-          useLibraryCodeForTypes = true,
-          autoSearchPaths = true,
-          diagnosticMode = "workspace",
-          autoImportCompletions = true,
+      ty = {
+        diagnosticMode = "workspace",
+        completions = {
+          autoImport = false,
         },
       },
     },
