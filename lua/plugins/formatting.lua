@@ -1,4 +1,4 @@
-return {
+local opts = {
   formatters_by_ft = {
     lua = { "stylua" },
     cpp = { "clang-format" },
@@ -39,4 +39,10 @@ return {
     --   prepend_args = { "-rm-unused" },
     -- },
   },
+}
+
+return {
+  "stevearc/conform.nvim",
+  event = "BufWritePre",
+  opts = opts,
 }
