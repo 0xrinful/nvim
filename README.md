@@ -22,16 +22,32 @@ but it **does not use the full NvChad framework or its default configurations** 
 
 ```bash
 ~/.config/nvim
-├── init.lua               # Main entry point
+├── init.lua                 # Entry point
 └── lua/
-    ├── configs/           # Plugin configurations
-    ├── plugins/           # Plugin spec tables for lazy.nvim
-    │   └── init.lua
-    ├── autocmds.lua       # Autocommands
-    ├── chadrc.lua         # NvChad UI configuration
-    ├── code_runner.lua    # Code runner setup
-    ├── mappings.lua       # Keybindings
-    └── options.lua        # Neovim options
+    ├── core/                # Core Neovim settings (always loaded)
+    │   ├── autocmds.lua     # Autocommands
+    │   ├── code_runner.lua  # Code runner logic
+    │   ├── mappings.lua     # Keybindings
+    │   └── options.lua      # Neovim options
+    │
+    ├── plugins/             # lazy.nvim plugin specs
+    │   ├── debug.lua
+    │   ├── formatting.lua
+    │   ├── linting.lua
+    │   ├── lsp.lua
+    │   ├── mason.lua
+    │   ├── treesitter.lua
+    │   └── ui.lua
+    │
+    ├── configs/             # Plugin-specific configurations
+    │   ├── blink.lua
+    │   ├── dap.lua
+    │   ├── lazy.lua
+    │   ├── lspconfig.lua
+    │   ├── noice.lua
+    │   └── telescope.lua
+    │
+    └── chadrc.lua           # NvChad UI configuration
 ```
 
 ## 🛠️ Installation
