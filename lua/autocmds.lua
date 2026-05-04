@@ -69,3 +69,17 @@ autocmd("FileType", {
 usercmd("ToggleFormat", function()
   vim.b.disable_format = not vim.b.disable_format
 end, {})
+
+autocmd("FileType", {
+  callback = function()
+    pcall(vim.treesitter.start)
+    -- Enable treesitter-based indentation
+    -- vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+  end,
+})
+
+usercmd("TSInstallAll", function()
+  local spec = require("lazy.core.config").plugins["nvim-treesitter"]
+  local opts = type(spec.opts) == "table" and spec.opts or {}
+  require("nvim-treesitter").install(opts.ensure_installed)
+end, {})
