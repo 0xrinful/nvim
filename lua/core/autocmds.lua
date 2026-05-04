@@ -66,10 +66,6 @@ autocmd("FileType", {
   end,
 })
 
-usercmd("ToggleFormat", function()
-  vim.b.disable_format = not vim.b.disable_format
-end, {})
-
 autocmd("FileType", {
   callback = function()
     pcall(vim.treesitter.start)
@@ -78,8 +74,26 @@ autocmd("FileType", {
   end,
 })
 
+-- wrap, linebreak and spellcheck on markdown and text files
+autocmd("FileType", {
+  pattern = { "markdown", "text", "gitcommit" },
+  callback = function(args)
+    vim.opt_local.wrap = true
+    vim.opt_local.linebreak = true
+    -- vim.opt_local.spell = true
+
+    local opts = { expr = true, silent = true, buf = args.buf }
+    vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", opts)
+    vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", opts)
+  end,
+})
+
 usercmd("TSInstallAll", function()
   local spec = require("lazy.core.config").plugins["nvim-treesitter"]
   local opts = type(spec.opts) == "table" and spec.opts or {}
   require("nvim-treesitter").install(opts.ensure_installed)
+end, {})
+
+usercmd("ToggleFormat", function()
+  vim.b.disable_format = not vim.b.disable_format
 end, {})

@@ -26,6 +26,10 @@ map("n", "<Down>", cmd("resize -2"), { desc = "Decrease window height" })
 map("n", "<Left>", cmd("vertical resize -2"), { desc = "Decrease window width" })
 map("n", "<Right>", cmd("vertical resize +2"), { desc = "Increase window width" })
 
+-- Better page navigation
+-- map("n", "<C-d>", "<C-d>zz", { desc = "Half page down (centered)" })
+-- map("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
+
 -- -------------------------------------------------------------------------
 -- BUFFERS & FILES
 -- -------------------------------------------------------------------------
