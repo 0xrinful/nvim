@@ -74,7 +74,7 @@ autocmd("FileType", {
   callback = function()
     pcall(vim.treesitter.start)
     -- Enable treesitter-based indentation
-    -- vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
   end,
 })
 
