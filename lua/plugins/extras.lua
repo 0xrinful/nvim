@@ -54,6 +54,13 @@ return {
       custom_textobjects = {
         t = false,
       },
+
+      mappings = {
+        around_next = "aN",
+        inside_next = "iN",
+        around_last = "aP",
+        inside_last = "iP",
+      },
     },
   },
 
