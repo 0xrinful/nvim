@@ -19,6 +19,11 @@ local handlers = {
     return string.format("g++ -std=c++14 %s -o %s && ./%s && rm %s", file, out, out, out)
   end,
 
+  c = function()
+    local file, out = quote(expand("%:t")), expand("%:t:r")
+    return string.format("gcc %s -o %s && ./%s && rm %s", file, out, out, out)
+  end,
+
   java = function()
     return string.format("javac %s && java %s", expand("%:t"), expand("%:t:r"))
   end,
