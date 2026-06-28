@@ -20,6 +20,10 @@ map("n", "<C-l>", "<C-w>l", { desc = "Switch to right window" })
 map("n", "<C-j>", "<C-w>j", { desc = "Switch to bottom window" })
 map("n", "<C-k>", "<C-w>k", { desc = "Switch to top window" })
 
+-- Jump list navigation
+map("n", "[j", "<C-o>", { desc = "Jump backward" })
+map("n", "]j", "<C-i>", { desc = "Jump forward" })
+
 -- Resizing panes
 map("n", "<Up>", cmd("resize +2"), { desc = "Increase window height" })
 map("n", "<Down>", cmd("resize -2"), { desc = "Decrease window height" })
