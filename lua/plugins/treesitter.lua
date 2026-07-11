@@ -27,6 +27,7 @@ return {
         "java",
         "go",
         "http",
+        "sql",
       },
     },
     config = function()

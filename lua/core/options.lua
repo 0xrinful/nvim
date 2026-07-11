@@ -77,6 +77,11 @@ g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
 
 -------------------------------------------------------------------------------
+-- Built-in Language Overrides
+-------------------------------------------------------------------------------
+g.no_go_maps = true -- disable built-in go text-object mappings
+
+-------------------------------------------------------------------------------
 -- System Path Management
 -------------------------------------------------------------------------------
 -- Add Mason binaries to the system PATH so Neovim can find LSPs/Formatters
