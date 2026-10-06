@@ -89,13 +89,17 @@ local opts = {
   sources = {
     default = { "lsp", "snippets", "buffer", "path" },
     per_filetype = {
-      sql = { "snippets", "dadbod" },
-      mysql = { "snippets", "dadbod" },
+      sql = { "snippets", "sqmeow" },
+      mysql = { "snippets", "sqmeow" },
     },
     providers = {
       dadbod = {
         name = "dadbod",
         module = "vim_dadbod_completion.blink",
+      },
+      sqmeow = {
+        name = "sqmeow",
+        module = "sqmeow.completion.blink",
       },
       path = {
         opts = {

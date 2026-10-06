@@ -119,7 +119,8 @@ return {
   },
 
   {
-    "mistweaverco/kulala.nvim",
+    "dont-be-evil-company/kulala.nvim",
+    pin = true,
     ft = { "http", "rest" },
     opts = {
       global_keymaps = {
