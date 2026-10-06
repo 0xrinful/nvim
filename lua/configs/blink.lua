@@ -93,10 +93,6 @@ local opts = {
       mysql = { "snippets", "sqmeow" },
     },
     providers = {
-      dadbod = {
-        name = "dadbod",
-        module = "vim_dadbod_completion.blink",
-      },
       sqmeow = {
         name = "sqmeow",
         module = "sqmeow.completion.blink",

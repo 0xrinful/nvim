@@ -86,7 +86,7 @@ map("v", "<C-/>", "gc", { desc = "Toggle selection comment", remap = true })
 map("n", "<leader>cp", function()
   require("core.code_runner").run()
 end, { desc = "Code: Run project" })
-map("n", "<leader>do", cmd("DBUIToggle"), { desc = "Database: Toggle UI" })
+map("n", "<leader>do", cmd("Sqmeow toggle"), { desc = "Database: Toggle UI" })
 
 -- UI Tools
 map("n", "<C-n>", cmd("NvimTreeToggle"), { desc = "Explorer: Toggle tree" })
