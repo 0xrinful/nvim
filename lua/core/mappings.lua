@@ -81,6 +81,7 @@ end, { desc = "Format code" })
 -- Commenting (respects remap for internal gc/gcc)
 map("n", "<C-/>", "gcc", { desc = "Toggle line comment", remap = true })
 map("v", "<C-/>", "gc", { desc = "Toggle selection comment", remap = true })
+map("n", "<leader>cc", cmd("Inscom"), { desc = "Insert styled comment" })
 
 -- Code Runner & DB
 map("n", "<leader>cp", function()

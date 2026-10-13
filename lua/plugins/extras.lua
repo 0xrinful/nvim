@@ -120,6 +120,7 @@ return {
 
   {
     "dont-be-evil-company/kulala.nvim",
+    commit = "6656c9d332735ca6a27725e0fb45a1715c4372d9",
     pin = true,
     ft = { "http", "rest" },
     opts = {
@@ -156,6 +157,25 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     event = "User FilePost",
     opts = {},
+  },
+
+  {
+    "malick-tammal/inscom.nvim",
+    cmd = { "Inscom" },
+    opts = {
+      style = "dashed",
+      styles_menu = false,
+      tag = true,
+      tags_menu = true,
+      filetypes = {
+        go = { prefix = "// " },
+        lua = { prefix = "--" },
+        javascript = { prefix = "// " },
+        toml = { prefix = "#" },
+        css = { prefix = "/*", suffix = "*/" },
+        python = { prefix = "# " },
+      },
+    },
   },
 
   {
