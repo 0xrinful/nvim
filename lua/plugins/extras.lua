@@ -5,8 +5,8 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     event = "User FilePost",
     opts = {
-      indent = { char = "│", highlight = "IblChar" },
-      scope = { char = "│", highlight = "IblScopeChar", show_start = false, show_end = false },
+      indent = { char = "│", highlight = "IblIndent" },
+      scope = { char = "│", highlight = "IblScope", show_start = false, show_end = false },
     },
     config = function(_, opts)
       dofile(vim.g.base46_cache .. "blankline")

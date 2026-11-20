@@ -6,6 +6,10 @@ local usercmd = vim.api.nvim_create_user_command
 autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
   group = augroup("NvFilePost", { clear = true }),
   callback = function(args)
+    if not vim.api.nvim_buf_is_valid(args.buf) then
+      args.buf = vim.api.nvim_get_current_buf()
+    end
+
     local file = vim.api.nvim_buf_get_name(args.buf)
     local buftype = vim.api.nvim_get_option_value("buftype", { buf = args.buf })
 
